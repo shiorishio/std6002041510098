@@ -1,7 +1,9 @@
 // import library
 import React from 'react';
 import { View, Text } from 'react-native';
-import Header from './Header'
+import Header from './Header';
+import Card from './Cardr';
+
 
 // write component
 class App extends React.Component {

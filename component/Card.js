@@ -13,8 +13,8 @@ class Card extends Component {
                             source={{ uri: 'https://goo.gl/PguLCa' }} 
                         />
                         <View style={{margin:15}}>
-                        <Text>อาชิตะ</Text>
-                        <Text>POP</Text>
+                        <Text>เด็กชายสาม</Text>
+                        <Text>In wonderland</Text>
                         </View>
                     </View>
                 </CardSection> 
@@ -27,8 +27,8 @@ class Card extends Component {
                 </CardSection>
 
                 <CardSection>
-                    <View>
-                    <View style={{ width: 100, alignItems: 'center' }}>
+                    <View style={{justifyContent: "center" , alignItems: "center", marginTop: 5}}>
+                    <View style={{ width: 100 }}>
                     <Button
                         title="Buy"
                     />

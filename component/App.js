@@ -11,8 +11,8 @@ class App extends React.Component {
         return (
             //component about react native
             < View >
-                <Header title="Albums" />
-                <Text>Hello Shiori</Text>
+                <Header title="Welcome to Wonderland" />
+                <Text></Text>
                 <Card />
             </View>
         );

@@ -7,7 +7,7 @@ class Card extends Component {
         return(
             <View>
                 <CardSection>
-                    <View style={{flexDirection: "row"}}>
+                <View style={{flexDirection: "row"}}>
                         <Image 
                             style={{ width: 50, height: 50 }}
                             source={{ uri: 'https://goo.gl/PguLCa' }} 

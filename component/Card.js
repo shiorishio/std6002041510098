@@ -7,13 +7,18 @@ class Card extends Component {
         return(
             <View>
                 <CardSection>
-                    <Image 
-                        style={{ width: 50, height: 50 }}
-                        source={{ uri: 'https://goo.gl/PguLCa' }} 
-                    />
-                    <Text>อาชิตะ</Text>
-                    <Text>POP</Text>
-                </CardSection>  
+                    <View style={{flexDirection: "row"}}>
+                        <Image 
+                            style={{ width: 50, height: 50 }}
+                            source={{ uri: 'https://goo.gl/PguLCa' }} 
+                        />
+                        <View style={{margin:15}}>
+                        <Text>อาชิตะ</Text>
+                        <Text>POP</Text>
+                        </View>
+                    </View>
+                </CardSection> 
+
                 <CardSection>
                     <Image 
                         style={{ width: 450, height: 300 }}

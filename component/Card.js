@@ -13,8 +13,8 @@ class Card extends Component {
                             source={{ uri: 'https://goo.gl/PguLCa' }} 
                         />
                         <View style={{margin:15}}>
-                        <Text>เด็กชายสาม</Text>
-                        <Text>In wonderland</Text>
+                        <Text>My name is เด็กชายสาม</Text>
+                        <Text>I am from Wonderland</Text>
                         </View>
                     </View>
                 </CardSection> 

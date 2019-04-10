@@ -8,17 +8,17 @@ class Profile extends React.Component {
     constructor(){
         super();
         this.state = {
-            name: "Loading...",
-            email: "Loading...",
+            name: "Loading",
+            email: "Loading",
         };   
     }
     
     static navigationOptions = {
         title: "Profile",
         headerStyle: {
-            backgroundColor: "#17202A",
+            backgroundColor: "red",
         },
-        headerTintColor: "#ec9bac",
+        headerTintColor: "yellow",
     };
 
     async logOut() {
@@ -41,7 +41,7 @@ class Profile extends React.Component {
                 "Authorization": "Bearer " + token
             }
         }).then(function (response) {
-                console.log("response----------------------");
+                console.log("response...");
                 console.log(response);
 
                 this.setState({ 

@@ -1,6 +1,6 @@
 // import library
 import React from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, TextInput, Button } from 'react-native';
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -9,13 +9,14 @@ class Login extends React.Component {
     static navigationOptions = {
             title: "Login",
             headerStyle: {
-                backgroundColor: "blue",
-            }
+                backgroundColor: "green",
+            },
+            headerTintColor: "pink",
 
     };
     constructor(props) {
         super(props)
-        this.state ={
+        this.state = {
             email: '',
             password: ''
         }
@@ -38,7 +39,7 @@ class Login extends React.Component {
         }).then(async function (response) {
             console.log(response.data.data.token);
             try {
-                await AsyncStorage.setItem("login_token",response.data.data.token);
+                await AsyncStorage.setItem("login_token", response.data.data.token);
             } catch (error) {
                 alert("Error");
                 return;
@@ -50,10 +51,10 @@ class Login extends React.Component {
         });
     }
 
-    async componentDidCatch() {
+    async componentDidMount() {
         try{
             if (await AsyncStorage.getIem("login_token") !==null) {
-                this.props.navigate.navigate("Profile");
+                this.props.navigation.navigate("Profile");
             }
         } catch (error) {
             console.error(error);
@@ -68,8 +69,8 @@ class Login extends React.Component {
 
     render() {
         return (
+            //<Text>Test Email</Text>
             <View>
-                <Text>Test Email</Text>
                 <TextInput 
                     style={{ height: 40, fontWeight: 'bold', fontSize: 20 }}
                     placeholder="E-mail"
@@ -83,9 +84,10 @@ class Login extends React.Component {
                     placeholder="Password"
                     value={this.state.password}
                     //onChangeText={this.onChangePassword.bind(this)}
-                    onChangeText = {(pass)=> {this.setState({password: pass}) }}
+                    onChangeText = { (pass) => {this.setState({password: pass}) }}
                 />
                 <Button
+                    color="blue"
                     title="Login"
                     onPress={this.onPress.bind(this)}
                 />

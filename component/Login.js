@@ -33,7 +33,7 @@ class Login extends React.Component {
     onPress(){
         //console.log(this.state)
         //const url = ('http://128.199.240.120:9999/api/auth/login', {
-        axios.post("http://128.199.240.120:9999/api/auth/login", {
+        axios.post('http://128.199.240.120:9999/api/auth/login', {
             email: this.state.email,
             password: this.state.password
         }).then(async function (response) {
@@ -87,7 +87,7 @@ class Login extends React.Component {
                     onChangeText = { (pass) => {this.setState({password: pass}) }}
                 />
                 <Button
-                    color="blue"
+                    color="#1E90FF"
                     title="Login"
                     onPress={this.onPress.bind(this)}
                 />

@@ -8,17 +8,17 @@ class Profile extends React.Component {
     constructor(){
         super();
         this.state = {
-            name: "Loading",
-            email: "Loading",
+            name: "Loading...",
+            email: "Loading...",
         };   
     }
     
     static navigationOptions = {
         title: "Profile",
         headerStyle: {
-            backgroundColor: "red",
+            backgroundColor: "#FFE4C4",
         },
-        headerTintColor: "yellow",
+        headerTintColor: "#7FFFD4",
     };
 
     async logOut() {

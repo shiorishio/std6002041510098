@@ -53,7 +53,7 @@ class Login extends React.Component {
 
     async componentDidMount() {
         try{
-            if (await AsyncStorage.getIem("login_token") !==null) {
+            if (await AsyncStorage.getItem("login_token") !==null) {
                 this.props.navigation.navigate("Profile");
             }
         } catch (error) {
